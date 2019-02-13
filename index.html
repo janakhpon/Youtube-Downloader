@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="sidebar">
+
+            <div class="sidebar_canvas">
+
+                <div class="sidebar_first">
+
+                    <div class="first_topbar">
+
+                        <ul class="main-nav">
+
+                            <li><i id="backward" class="fas fa-arrow-alt-circle-left"></i></li>
+                            <li><i id="forward" class="fas fa-arrow-alt-circle-right"></i></li>
+                            <li><i id="video" class="fas fa-video"></i></li>
+                            <li><i id="audio" class="fas fa-headphones"></i></li>
+
+
+                        </ul>
+
+                    </div>
+                    <div class="first_bottombar">
+
+                        <ul class="main-nav">
+
+                            <li><i id="reload" class="fas fa-sync-alt"></i></li>
+                            <li><i id="clear" class="fas fa-broom"></i></li>
+                            <li><i class="fas fa-language"></i></li>
+                            <li> <i id="power" class="fas fa-power-off"></i> </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+                <div class="sidebar_second">
+
+                    <input type="text" id="statuschange">
+                    <input type="text" id="statuschange1">
+
+
+
+
+                </div>
+
+                <div class="sidebar_third">
+
+
+                    <input type="text" id="progress1">
+                    <input type="text" id="progress2">
+
+
+                </div>
+
+                <div class="sidebar_fourth">
+
+                    <input type="text" id="progress3">
+                    <input type="text" id="progress4">
+
+                </div>
+
+
+
+                
+
+
+            </div>
+
+        </div>
+
+        <div class="main_panel">
+
+            <div class="main_panel_canvas">
+                <webview id="view" class="page" src="https://youtube.com/" nodeintegration></webview>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var webview = document.getElementById('view');
+
+    </script>
+
+    <script>
+        require('./renderer.js')
+    </script>
+
+</body>
+
+</html>
