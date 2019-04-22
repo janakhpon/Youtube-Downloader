@@ -2,6 +2,9 @@
  JDownloader is built for downloading videos/audios from Youtube. JDownloader uses responsive design pattern.check out [ytdl-core](https://github.com/janakhpon/JDownloader.git).
 
 
+[![Build Status](https://github.com/janakhpon/JDownloader.git)](https://github.com/janakhpon/JDownloader)
+[![Dependency Status](https://david-dm.org/fent/node-ytdl.svg)](https://david-dm.org/fent/node-ytdl)
+[![codecov](https://codecov.io/gh/fent/node-ytdl/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/node-ytdl)
 
 # Usage
 
