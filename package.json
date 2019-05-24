@@ -28,7 +28,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "dependencies": {
-  "youtube-dl": "^1.12.2"
+    "youtube-dl": "^1.12.2"
   },
   "devDependencies": {
     "electron": "^4.0.4",
