@@ -13,12 +13,12 @@ html {
 }
 
 .sidebar {
-  width: 30vw;
-  height: 100vh;
+  width: 24.9999vw;
+  height: 99.9999vh;
 }
 .main_panel {
-  width: 70vw;
-  height: 100vh;
+  width: 74.9999vw;
+  height: 99.9999vh;
 }
 
 .sidebar > div {

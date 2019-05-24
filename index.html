@@ -1,109 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title>Downloader</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
+    <!---------------------------------------- ** START MAIN BODY ** --------------------------------------------->
 
     <div class="main">
-
-        <div class="sidebar">
-
-            <div class="sidebar_canvas">
-
-                <div class="sidebar_first">
-
-                    <div class="first_topbar">
-
-                        <ul class="main-nav">
+      <!---------------------------------------- ** START SIDEBAR ** --------------------------------------------->
+      <div class="sidebar">
+        <div class="sidebar_canvas">
+          <div class="sidebar_first">
 
 
-                            <li class="main-nav_content"> <i id="video" class="fas fa-video fa-1x"> MP4</i></li>
-                            <li class="main-nav_content"> <i id="audio" class="fas fa-headphones fa-1x"> MP3</i></li>
+            <div class="first_topbar">
+              <ul class="main-nav">
+
+                <li class="second-nav_content">
+                  <i id="reload" class="fas fa-sync-alt fa-2x"> </i>
+                  <h5>REFRESH</h5>
+                </li>
+                <li class="second-nav_content">
+                  <i id="backward" class="fas fa-arrow-alt-circle-left fa-2x"></i>
+                  <h5>BACKWARD</h5>
+                </li>
+                <li class="second-nav_content">
+                  <i id="forward" class="fas fa-arrow-alt-circle-right fa-2x"></i>
+                  <h5>FORWARD</h5>
+                </li>
+                <li class="second-nav_content">
+                  <i id="power" class="fas fa-power-off fa-2x"></i>
+                  <h5>SHUTDOWN</h5>
+                </li>
 
 
-                        </ul>
-
-                    </div>
-                    <div class="first_bottombar">
-
-                        <ul class="second-nav">
-
-                            <li class="second-nav_content"><i id="reload" class="fas fa-sync-alt"></i></li>
-                            <li class="second-nav_content"><i id="backward" class="fas fa-arrow-alt-circle-left"></i></li>
-                            <li class="second-nav_content"><i id="forward" class="fas fa-arrow-alt-circle-right"></i></li>
-                            <li class="second-nav_content"> <i id="power" class="fas fa-power-off"></i> </li>
-
-                        </ul>
-
-                    </div>
-
-
-                </div>
-
-                <div class="sidebar_second">
-
-                    <input type="text" id="statuschange">
-                    <input type="text" id="statuschange1">
-
-
-
-
-                </div>
-
-                <div class="sidebar_third">
-
-
-                    <input type="text" id="progress1">
-                    <input type="text" id="progress2">
-
-
-                </div>
-
-                <div class="sidebar_fourth">
-
-                    <input type="text" id="progress3">
-                    <input type="text" id="progress4">
-
-                </div>
-
-
-
-                
-
-
+              </ul>
             </div>
 
+
+            <div class="first_bottombar">
+              
+            </div>
+          </div>
+
+          <div class="sidebar_second">
+            <input type="text" id="statuschange" />
+            <input type="text" id="statuschange1" />
+          </div>
+
+          <div class="sidebar_third">
+            <input type="text" id="progress1" />
+            <input type="text" id="progress2" />
+          </div>
+
+          <div class="sidebar_fourth">
+            <input type="text" id="progress3" />
+            <input type="text" id="progress4" />
+          </div>
         </div>
+      </div>
 
-        <div class="main_panel">
+      <!---------------------------------------- ** END SIDEBAR ** --------------------------------------------->
 
-            <div class="main_panel_canvas">
-                <webview id="view" class="page" src="https://youtube.com/" nodeintegration></webview>
+      <!---------------------------------------- ** START MAIN PANEL ** --------------------------------------------->
+      <div class="main_panel">
+        <div class="main_panel_canvas">
+          <webview
+            id="view"
+            class="page"
+            src="https://youtube.com/"
+            nodeintegration
+          ></webview>
+
+          <!---------------------------------------- ** START NAVIGATION ** --------------------------------------------->
+          <div class="navigation">
+            <div id="video" class="navigation__video">
+              <span class="navigation__video--label">
+                <i class="fab fa-youtube fa-2x"></i>
+              </span>
             </div>
 
-        </div>
+            <div id="audio" class="navigation__audio">
+              <span class="navigation__audio--label">
+                <i id="icon__audio" class="fas fa-headphones-alt fa-2x"></i>
+              </span>
+            </div>
+          </div>
+          <!---------------------------------------- ** END NAVIGATION ** --------------------------------------------->
 
+
+        </div>
+      </div>
+      <!---------------------------------------- ** END MAIN PANEL ** --------------------------------------------->
     </div>
 
-    <script>
-        var webview = document.getElementById('view');
+    <!---------------------------------------- ** START MAIN BODY ** --------------------------------------------->
 
+    <!---------------------------------------- ** START SCRIPTS ** --------------------------------------------->
+
+    <script>
+      var webview = document.getElementById("view");
+    </script>
+    <script>
+      require("./renderer.js");
     </script>
 
-    <script>
-        require('./renderer.js')
-    </script>
-
-</body>
-
+    <!---------------------------------------- ** END SCRIPTS ** --------------------------------------------->
+  </body>
 </html>
